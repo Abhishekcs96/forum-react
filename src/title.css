@@ -1,0 +1,26 @@
+#jumbotron {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    top: 10px;
+    left: 88px;
+    width: 1104px;
+    height: 180px;
+    max-height: 20vh;
+    background: #141C3A 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 8px #00000034;
+    border-radius: 20px;
+    opacity: 1;
+    /* margin: 50px 0;
+    padding: 30px; */
+
+}
+
+#buttonintitle{
+    border-radius: 50px;
+    border: 3px solid #7510F7;
+    font-size: x-large;
+    padding: 20px;
+}

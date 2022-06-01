@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.comments {
+  background-color: #7510f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.comments-container {
+  margin-top: 30vh;
+  width: 50vw;
+}
+
+.comment-form-button:hover:enabled {
+  cursor: pointer;
+  background: rgb(37, 99, 235);
+}
+
+.comment-form-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.comment-form-cancel-button {
+  margin-left: 10px;
+}
+
+.comment {
+  display: flex;
+  margin-bottom: 28px;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+.comment-right-part {
+  width: 100%;
+  background-color: #fff;
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.comment-author {
+  margin-right: 8px;
+  font-size: 20px;
+  color: #000
+}
+
+.comment-body {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #000
+}
+
+.comment-text {
+  font-size: 18px;
+}
+
+.comment-actions {
+  display: flex;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  cursor: pointer;
+  margin-top: 8px;
+
+}
+
+.comment-action {
+  margin-right: 8px;
+  top: 50%;
+left: 75%;
+width: 20%;
+height: 10%;
+border: 3px solid #7510F7;
+border-radius: 50px;
+opacity: 1;
+text-align: center;
+font-weight: 400;
+color: #7510f7;
+}
+
+.comment-action:hover {
+  text-decoration: underline;
+}
+
+.replies {
+  margin-top: 20px;
+
 }
