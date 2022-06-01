@@ -41,8 +41,8 @@ const Comment = ({
           </Post>
         </div>
         {isReplying && (
-          <Post submitLabel="Reply"
-          handleSubmit={(text) => addComment(text, replyId)}
+          <Post
+          handleSubmit={(text, pseudonym) => addComment(text, pseudonym, replyId)}
           />
         )}
         {replies.length > 0 && (

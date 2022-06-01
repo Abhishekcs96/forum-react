@@ -1,15 +1,15 @@
 import React from "react";
 import './post.css'
 import { useState  } from "react";
-const Post = (props, {handleSubmit,
-    initialText = "",
-  }) => {
-    const [text, setText] = useState(initialText);
+const Post = (props, {handleSubmit}
+  ) => {
+    const [text, setText] = useState("");
     const [pseudonym, setpseudonym] = useState("")
     const isTextareaDisabled = text.length === 0;
     const onSubmit = (event) => {
         event.preventDefault();
         handleSubmit(text, pseudonym);
+        console.log(handleSubmit)
         setText("");
       };
     
