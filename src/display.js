@@ -18,7 +18,8 @@ const Display = ({currentUserId}) => {
     backendComments
       .filter((backendComment) => backendComment.parentId === commentId)
   const addComment = (text, pseudonym, parentId) => {
-    createCommentApi(text, pseudonym, parentId).then((comment) => {
+      console.log("addcomment", text, pseudonym, parentId)
+       createCommentApi(text, pseudonym, parentId).then((comment) => {
       setBackendComments([comment, ...backendComments]);
       setActiveComment(null);
     });
@@ -32,7 +33,7 @@ const Display = ({currentUserId}) => {
 
     return (
         <div className="comments">
-          <Post submitLabel="Write" handleSubmit={addComment} />
+          <Post handleSubmit={addComment}/>
           <div className="comments-container">
             {rootComments.map((rootComment) => (
               <Comment
