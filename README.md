@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Clone repo, and run in development mode.
+PROJECT IS NOT COMPLETE YET, lacks backend functionality to store messages.
 
 ## Available Scripts
 
