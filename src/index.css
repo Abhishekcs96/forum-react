@@ -34,7 +34,8 @@
 
 .comment-right-part {
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(207, 183, 183);
+  opacity: 1
 }
 
 .comment-content {

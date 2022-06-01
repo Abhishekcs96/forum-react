@@ -16,9 +16,12 @@ const Display = ({currentUserId}) => {
     )
     const getReplies = (commentId) =>
     backendComments
-      .filter((backendComment) => backendComment.parentId === commentId)
-  const addComment = (text, parentId) => {
-    createCommentApi(text, parentId).then((comment) => {
+      .filter((backendComment) => backendComment.parentId === commentId).sort(
+        (a, b) =>
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      );
+  const addComment = (text, pseudonym, parentId) => {
+    createCommentApi(text, pseudonym, parentId).then((comment) => {
       setBackendComments([comment, ...backendComments]);
       setActiveComment(null);
     });

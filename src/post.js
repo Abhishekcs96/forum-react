@@ -5,10 +5,11 @@ const Post = (props, {handleSubmit,
     initialText = "",
   }) => {
     const [text, setText] = useState(initialText);
+    const [pseudonym, setpseudonym] = useState("")
     const isTextareaDisabled = text.length === 0;
     const onSubmit = (event) => {
         event.preventDefault();
-        handleSubmit(text);
+        handleSubmit(text, pseudonym);
         setText("");
       };
     
@@ -20,7 +21,7 @@ const Post = (props, {handleSubmit,
           </div>
           <div className="pseudonym">
               
-              <input className="placeholder1" placeholder="Enter your pseudonym"/>
+              <input className="placeholder1" value={pseudonym} placeholder="Enter your pseudonym" onChange={(e)=> setpseudonym(e.target.value)}/>
           </div>
           <div className="buttons">
           <button class="btn btn-outline-Dark" id="buttonintitle" type="button" onClick={onSubmit} disabled={isTextareaDisabled}>
